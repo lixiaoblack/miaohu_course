@@ -1,0 +1,2 @@
+
+static const systemLogin = '/system_login';
