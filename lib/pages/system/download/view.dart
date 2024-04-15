@@ -84,7 +84,8 @@ class DownloadPage extends GetView<DownloadController> {
                     },
                     icon: const Icon(Icons.download))
                 .backgroundColor(const Color(0xFF9982FF))
-                .clipOval());
+                .clipOval()
+                .marginOnly(bottom: 50.h));
       },
     );
   }

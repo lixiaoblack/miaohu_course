@@ -70,6 +70,11 @@ dependencies:
   wechat_camera_picker: 4.2.0-dev.3
   archive: ^3.4.10
   sembast: ^3.7.1
+  flutter_inappwebview: ^6.0.0
+  curved_navigation_bar: ^1.0.3
+  url_launcher: ^6.2.5
+  logger: ^2.2.0
+  flutter_styled_toast: ^2.2.1
 
 dev_dependencies:
   flutter_test:

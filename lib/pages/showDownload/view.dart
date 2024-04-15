@@ -24,7 +24,7 @@ class ShowdownloadPage extends GetView<ShowdownloadController> {
     for (String item in controller.filterDbData!.zipFiles) {
       if (!item.endsWith('.svga')) {
         list.add(ImageWidget.file(DBService.to.path + item));
-      }
+      } else {}
     }
     return list;
   }

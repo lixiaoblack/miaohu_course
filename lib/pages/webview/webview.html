@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>这是webview的内置页面</title>
+</head>
+<style>
+  .box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    width: 100px;
+    height: 30px;
+    margin: 20px 0;
+  }
+</style>
+
+<body>
+  <div class="box">
+    <button onclick="click1()">点击触发事件</button>
+    <button onclick="click2()">点击刷新</button>
+    <button onclick="click3()">点击修改标题</button>
+    <button onclick="click4()">获取APP数据</button>
+    <p id="textButton">这是H5的文字</p>
+  </div>
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/vConsole/3.3.0/vconsole.min.js"></script>
+<script>
+  // 初始化
+  var vConsole = new VConsole()
+</script>
+
+<script>
+  function click1() {
+    window.flutter_inappwebview.callHandler("clickEvent", {
+      data: "11111",
+    });
+  }
+  function click2() {
+    window.flutter_inappwebview.callHandler("reload");
+  }
+  function click3() {
+    window.flutter_inappwebview.callHandler("changeTtile", {
+      data: "这是H5需要修改的标题",
+    });
+  }
+  function click4() {
+    window.flutter_inappwebview.callHandler("getText").then(res => {
+      document.getElementById("textButton").innerText = res;
+    });
+  }
+</script>
+
+</html>
